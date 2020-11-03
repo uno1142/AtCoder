@@ -11,7 +11,7 @@ int main(){
     cin >> vec.at(i);
     sum += vec.at(i);
   }
-  
+  s
   int average_score = sum / N;
   
   for(int j = 0; j< N; j++){
