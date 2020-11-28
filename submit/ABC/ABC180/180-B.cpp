@@ -3,6 +3,8 @@
 using namespace std;
 using ll = long long;
 
+#define ll = long long
+
 
 int main(){
     int N;
@@ -13,8 +15,6 @@ int main(){
     ll a=0; //まんはったん　
     ll b=0;//ゆーくりっど
     ll c=0;//ちぇびしぇふ
-
-
 
     rep(i,N){
         cin >> X[i];
