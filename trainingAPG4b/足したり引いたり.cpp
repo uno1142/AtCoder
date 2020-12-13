@@ -20,4 +20,5 @@ int main(){
 }
 
 
+
 //解答例はint answer = 1で書いてif文で++と--をanswerに使ってた。これだとACは出るが無駄が多い
