@@ -5,7 +5,7 @@ using ll = long long;
 using Graph = vector<vector<int>>;
 const double PI = 3.14159265358979323846;
 const ll MOD = 1000000007;
-const int INF = 1e9;
+const ll INF = 1e18;
 
 
 int main(){
