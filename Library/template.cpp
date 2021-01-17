@@ -5,6 +5,7 @@
 using namespace std;
 using ll = long long;
 using Graph = vector<vector<int>>;
+using pint = pair<int,int>;
 const double PI = 3.14159265358979323846;
 
 const int dx[4] = {1,0,-1,0};
