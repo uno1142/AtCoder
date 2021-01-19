@@ -9,48 +9,43 @@ using pint = pair<int,int>;
 const double PI = 3.14159265358979323846;
 
 int main(){
-    int N,M;
-    cin >> N >> M;
 
-    vector<ll>A(N);
-    rep(i,0,N)cin >> A[i];
+    int N,X;
+    cin >> N >> X;
 
-    map<ll,int>mp;
+    int min_val = 1e9;
+    int max_val = 0;
+
+    //input 初距離,初運賃,加算距離,加算運賃
 
     rep(i,0,N){
-        mp[A[i]]++;
-    }
+        int a,b,c,d;
+        cin >> a >> b >> c >> d;
+        int tmp = 0;
 
-    rep(i,0,M){
-        ll b, c;
-        cin >> b >> c;
-
-        for(auto x : mp){
-            if(x.first > c)break;
-            
-            if(b >= x.second){
-                mp[c]+= b;
-                b -= x.second;
-                x.second = 0;
-                
-            }
-            else{
-                mp[c]+= x.second - b;
-                x.second -= x.second - b;
-                break;
-            }
+        if(X < a){
+            tmp = b;
         }
+        else{
+            tmp = b;
+            X -= a;
 
-
+            int cnt = 1;
+            while(X > 0){
+                X -= a;
+                cnt++;
+            }
+            tmp += d * cnt;
+        }
+        min_val = min(min_val,tmp);
+        max_val = max(max_val,tmp);
     }
 
-    ll ans = 0;
-    for(auto x: mp){
-        ans += x.first * x.second;
-    }
-
-    cout << ans << endl;
+    cout << min_val << " " << max_val << endl;
     return 0;
+
+
+
 
 
 
